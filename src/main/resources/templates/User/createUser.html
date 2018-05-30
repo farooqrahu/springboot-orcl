@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8"/>
+
+    <title>Register Data User </title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/jquery.js" th:src="@{/js/jquery.js}"></script>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://use.fontawesome.com/ff147e8253.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../static/css/multimenu.css" rel="stylesheet" th:href="@{/css/multimenu.css}"/>
+    <script src="../static/js/multimenu.js" th:src="@{/js/multimenu.js}"></script>
+    <link href="../static/css/datepicker.css" rel="stylesheet" th:href="@{/css/datepicker.css}"/>
+    <script src="../static/js/bootstrap-datepicker.js" th:src="@{/js/bootstrap-datepicker.js}"></script>
+    <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+    </script>
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Registrar Data User </h2>
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading">Register Data User</div>
+
+        <div class="panel-body">
+            <form class="form-horizontal" role="form" th:action="@{/User/add}" th:object="${user}" method="post">
+
+
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input type="text" name="name" placeholder="name" id="name" class="form-control"
+                                   required="true"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-10">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input type="text" name="address" placeholder="Address" id="address" class="form-control"
+                                   required="true"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="record_number" class="col-sm-2 control-label">Record Number</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="record_number" placeholder="#######" class="form-control" id="record_number"
+                               required="true"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" name="action" class="btn btn-default">Save</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
